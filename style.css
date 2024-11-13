@@ -111,27 +111,27 @@ p {
 
 /* Contact button styling */
 #contact-button {
-    position: fixed; /* Make the button stick at the bottom right */
+    position: fixed; /* Keep the button in a fixed position at the bottom right */
     bottom: 20px; /* Distance from the bottom of the screen */
-    right: 20px; /* Distance from the right of the screen */
-    background-color: #333; /* Dark background */
-    color: white; /* Text color */
+    right: 20px; /* Distance from the right edge of the screen */
+    background-color: #333; /* Dark background color */
+    color: white; /* White text */
     padding: 10px 20px; /* Space inside the button */
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 30px; /* Round the corners of the button */
     text-decoration: none; /* Remove underline from the link */
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px; /* Set font size */
     display: none; /* Initially hide the button */
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and scaling */
 }
 
 #contact-button:hover {
-    background-color: #007bff; /* Change background color on hover */
+    background-color: #007bff; /* Change background color when hovered */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
 
-/* When image section is hovered, make the contact button visible */
+/* Make the button visible when the image section is hovered */
 .image-section:hover #contact-button {
-    display: inline-block; /* Show the button when the image section is hovered */
+    display: inline-block; /* Show the button when image section is hovered */
 }
 /* Footer styling */
 .footer {
