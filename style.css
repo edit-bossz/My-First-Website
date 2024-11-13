@@ -110,7 +110,7 @@ p {
 }
 
 /* Contact button styling */
-.contact-button {
+#contact-button {
     position: fixed; /* Make the button stick at the bottom right */
     bottom: 20px; /* Distance from the bottom of the screen */
     right: 20px; /* Distance from the right of the screen */
@@ -124,7 +124,7 @@ p {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-button:hover {
+#contact-button:hover {
     background-color: #007bff; /* Change background color on hover */
     transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
@@ -133,7 +133,6 @@ p {
 .image-section:hover #contact-button {
     display: inline-block; /* Show the button when the image section is hovered */
 }
-
 /* Footer styling */
 .footer {
     text-align: center;
