@@ -121,7 +121,7 @@ p {
     text-decoration: none; /* Remove underline from the link */
     font-size: 16px; /* Set font size */
     opacity: 0; /* Initially hide the button */
-    transition: opacity 0.3s ease-in-out, background-color 0.3s, transform 0.3s; /* Smooth transitions for opacity, background, and scaling */
+    transition: opacity 1s ease-in-out, background-color 0.3s, transform 0.3s; /* Smooth transitions for opacity (slower), background, and scaling */
     pointer-events: none; /* Disable interaction when the button is hidden */
 }
 
