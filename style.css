@@ -120,8 +120,9 @@ p {
     border-radius: 30px; /* Round the corners of the button */
     text-decoration: none; /* Remove underline from the link */
     font-size: 16px; /* Set font size */
-    display: none; /* Initially hide the button */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and scaling */
+    opacity: 0; /* Initially hide the button */
+    transition: opacity 0.3s ease-in-out, background-color 0.3s, transform 0.3s; /* Smooth transitions for opacity, background, and scaling */
+    pointer-events: none; /* Disable interaction when the button is hidden */
 }
 
 #contact-button:hover {
@@ -131,8 +132,10 @@ p {
 
 /* Make the button visible when the image section is hovered */
 .image-section:hover #contact-button {
-    display: inline-block; /* Show the button when image section is hovered */
+    opacity: 1; /* Gradually make the button visible */
+    pointer-events: auto; /* Enable interaction when the button is visible */
 }
+
 /* Footer styling */
 .footer {
     text-align: center;
