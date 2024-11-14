@@ -187,3 +187,9 @@ p {
         display: block;
     }
 }
+/* Hide the desktop contact button on mobile */
+@media (max-width: 768px) {
+    #contact-button {
+        display: none;
+    }
+}
