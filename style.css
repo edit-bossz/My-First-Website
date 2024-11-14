@@ -160,3 +160,13 @@ p {
         padding: 15px;
     }
 }
+/* Contact button styling for mobile */
+@media (max-width: 600px) {
+    #contact-button {
+        display: block; /* Always visible on mobile */
+        opacity: 1; /* No transition needed for mobile */
+    }
+    .image-section:hover #contact-button {
+        display: block; /* Ensure the button stays visible on mobile */
+    }
+}
