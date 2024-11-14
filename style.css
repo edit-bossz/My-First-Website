@@ -145,39 +145,3 @@ p {
     font-size: 14px;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em;
-        padding: 8px 16px;
-    }
-    .link-section a {
-        padding: 8px 16px;
-        margin: 5px;
-        font-size: 0.9em;
-    }
-    .section {
-        padding: 15px;
-    }
-}
-/* Contact button styling for mobile */
-@media (max-width: 600px) {
-    #contact-button {
-        display: block; /* Always visible on mobile */
-        opacity: 1; /* No transition needed for mobile */
-    }
-    .image-section:hover #contact-button {
-        display: block; /* Ensure the button stays visible on mobile */
-    }
-}
-/* Mobile-specific styling for the contact button */
-@media (max-width: 600px) {
-    #contact-button {
-        display: block; /* Ensure it's always visible */
-        opacity: 1;
-        position: fixed; /* Fix to viewport */
-        bottom: 20px; /* Position 20px from the bottom */
-        right: 20px; /* Position 20px from the right edge */
-        transition: none; /* Remove any hover transition */
-    }
-    }
