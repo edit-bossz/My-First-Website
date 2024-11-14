@@ -166,7 +166,7 @@ p {
     color: white;
     font-size: 16px;  /* Increase font size */
     line-height: 1.6;  /* Increase line height */
-    border-bottom: #fff;
+    border-top: 2px solid #fff;
 }
 
 /* Mobile-specific contact button */
