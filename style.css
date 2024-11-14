@@ -162,6 +162,13 @@ p {
     }
 }
 
+/* Ensure image-section does not interfere with button click */
+.image-section {
+    position: relative;
+    z-index: 1; /* Lower than contact button */
+}
+
+
 /* Footer styling */
 .footer {
     text-align: center;
