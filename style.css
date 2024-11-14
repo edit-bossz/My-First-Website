@@ -202,7 +202,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(to right, #0000ff, #1e90ff); /* Blue to Light Blue */
+    background: linear-gradient(to right, #0bddf0, #1e90ff); /* Blue to Light Blue */
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
