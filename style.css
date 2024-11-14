@@ -17,18 +17,33 @@ body {
 
 /* Header styling */
 header {
-    background-color: #007bff;
+    background-color: #007bff;  /* A more vibrant blue background */
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;  /* Increased padding for more spacing */
     text-align: center;
+    border-bottom: 4px solid #003366;  /* Added bottom border for extra definition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for better depth */
 }
 
-h1 {
-    color: white;
-    border: 2px solid #ccccc4;
-    padding: 10px 20px;
-    border-radius: 10px;
+/* Main heading styling */
+header h1 {
+    font-size: 2.5rem;  /* Larger font size for emphasis */
+    font-weight: bold;  /* Make the title bold */
+    letter-spacing: 1px;  /* Slight spacing between letters for better readability */
+    border: 2px solid #ffffff;  /* White border around the text */
+    padding: 15px 30px;
     display: inline-block;
+    border-radius: 10px;  /* Rounded corners for the border */
+    background-color: rgba(0, 0, 0, 0.3);  /* Slight transparent background */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  /* Soft shadow effect for depth */
+    transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+/* Hover effect on the title */
+header h1:hover {
+    background-color: #003366;  /* Darker background on hover */
+    transform: translateY(-5px);  /* Slight lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
 }
 
 /* Container styling */
