@@ -38,3 +38,6 @@ function updateContactLink() {
 // Call the function on page load and whenever the window is resized
 window.addEventListener('load', updateContactLink);
 window.addEventListener('resize', updateContactLink);
+
+// Ensure the footer contact link opens in a new tab
+document.querySelector('.footer .contact-link').setAttribute('target', '_blank');
