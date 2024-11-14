@@ -161,3 +161,91 @@ p {
     font-size: 14px;
 }
 
+
+
+
+
+@media (max-width: 768px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5rem;  /* Smaller font size */
+        padding: 8px 20px;  /* Reduced padding */
+    }
+
+    /* Sections */
+    .container {
+        padding: 15px;  /* Less padding */
+    }
+
+    .section {
+        width: 100%;  /* Full width on smaller screens */
+        padding: 15px;  /* Less padding */
+    }
+
+    /* Link buttons */
+    .link-section a {
+        padding: 8px 15px;  /* Smaller padding */
+        margin: 8px;  /* Reduced margin */
+    }
+
+    /* Image section */
+    .image-section img {
+        max-width: 150px;  /* Smaller image */
+    }
+
+    /* Contact button */
+    #contact-button {
+        font-size: 14px;  /* Smaller font size */
+        padding: 8px 16px;  /* Smaller padding */
+        bottom: 10px;  /* Slightly higher on small screens */
+        right: 10px;  /* Adjusted position */
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 12px;  /* Smaller text */
+        padding: 8px 0;  /* Adjusted padding */
+    }
+}
+
+/* For extra small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 1.3rem;  /* Even smaller font size */
+    }
+
+    /* Sections */
+    .container {
+        padding: 10px;  /* Minimal padding */
+    }
+
+    .section {
+        padding: 10px;  /* Less padding */
+    }
+
+    /* Link buttons */
+    .link-section a {
+        padding: 6px 12px;  /* Even smaller padding */
+        font-size: 14px;  /* Slightly smaller text */
+    }
+
+    /* Image section */
+    .image-section img {
+        max-width: 120px;  /* Even smaller image */
+    }
+
+    /* Contact button */
+    #contact-button {
+        font-size: 12px;  /* Even smaller font size */
+        padding: 6px 12px;  /* Even smaller padding */
+        bottom: 5px;  /* Adjusted position */
+        right: 5px;  /* Adjusted position */
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 10px;  /* Small text */
+    }
+}
+
