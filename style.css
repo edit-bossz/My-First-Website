@@ -131,7 +131,7 @@ p {
     transform: scale(1.05);
 }
 
-/* General Contact Button Styling */
+/* General Contact Button Styling (for desktop) */
 #contact-button {
     position: fixed;
     bottom: 20px;
@@ -154,20 +154,59 @@ p {
     transform: scale(1.1);
 }
 
-/* Always visible on mobile devices */
+/* Mobile Contact Button Styling (above Introduction) */
+#mobile-contact-button {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.1s ease-in-out; /* Smooth transition for fade-in */
+    pointer-events: auto; /* Enable interaction */
+    z-index: 9999;
+}
+
+/* Hover effect for mobile */
+#mobile-contact-button:hover {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Mobile-specific Styles */
 @media (max-width: 768px) {
-    #contact-button {
-        opacity: 1; /* Make sure it's visible on mobile */
-        pointer-events: auto; /* Enable interaction */
-        position: absolute;
-        top: 10px; /* Adjusted to be above the introduction section */
-        left: 50%;
-        transform: translateX(-50%); /* Center the button horizontally */
+    /* Show mobile contact button above the Introduction */
+    #mobile-contact-button {
+        opacity: 1; /* Make the mobile contact button visible */
     }
 
-    /* Additional styling for responsiveness */
+    /* Hide the original contact button on mobile */
+    #contact-button {
+        opacity: 0; /* Make sure it's hidden on mobile */
+        pointer-events: none; /* Disable interaction */
+    }
+
+    /* Adjusting the container to not overlap with the contact button */
     .container {
-        margin-top: 60px; /* Add margin to push down the content below the button */
+        margin-top: 60px; /* Space for the mobile contact button */
+    }
+}
+
+/* Ensure the original contact button is visible on larger screens */
+@media (min-width: 769px) {
+    #contact-button {
+        opacity: 1; /* Show the original contact button */
+        pointer-events: auto; /* Enable interaction */
+    }
+
+    #mobile-contact-button {
+        opacity: 0; /* Hide the mobile contact button */
+        pointer-events: none; /* Disable interaction */
     }
 }
 
