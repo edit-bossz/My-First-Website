@@ -168,6 +168,15 @@ p {
     line-height: 1.6;  /* Increase line height */
     border-top: 2px solid #fff;
 }
+.footer a {
+    color: white;  /* Makes the footer link white */
+    text-decoration: none;  /* Optional, removes underline */
+}
+
+.footer a:hover {
+    color: #ffdf00;  /* Optional, changes color on hover */
+    text-decoration: underline;  /* Optional, adds underline on hover */
+}
 
 /* Mobile-specific contact button */
 #mobile-contact {
