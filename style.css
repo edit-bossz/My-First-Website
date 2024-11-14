@@ -145,8 +145,10 @@ p {
     opacity: 0; /* Initially hidden */
     transition: opacity 0.1s ease-in-out; /* Smooth transition for fade-in */
     pointer-events: none; /* Disable interaction when hidden */
+    z-index: 9999; /* Make sure it stays on top */
 }
 
+/* Hover effect for desktop */
 #contact-button:hover {
     background-color: #007bff;
     transform: scale(1.1);
