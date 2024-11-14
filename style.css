@@ -17,7 +17,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #007bff;  /* A vibrant blue background */
+    background-color: #80deea;  /* A vibrant blue background */
     color: white;
     padding: 25px 0;  /* Increased top and bottom padding for more space */
     text-align: center;
@@ -162,7 +162,7 @@ p {
 .footer {
     text-align: center;
     padding: 20px 0;  /* Increase padding for more space */
-    background-color: #007bff;
+    background-color: #80deea;
     color: white;
     font-size: 16px;  /* Increase font size */
     line-height: 1.6;  /* Increase line height */
