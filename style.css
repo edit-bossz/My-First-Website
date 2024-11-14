@@ -202,7 +202,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Change colors as needed */
-    height: 100vh; /* Ensures the gradient fills the entire viewport */
-    margin: 0; /* Removes default margin */
+    background: linear-gradient(to right, #0000ff, #1e90ff); /* Blue to Light Blue */
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff; /* White text for contrast */
 }
