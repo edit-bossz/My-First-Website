@@ -1,17 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const contactButton = document.getElementById("contact-button");
-    const imageSection = document.querySelector(".image-section");
+// Select the image section and the contact button
+const imageSection = document.querySelector('.image-section');
+const contactButton = document.getElementById('contact-button');
 
-    imageSection.addEventListener("mouseenter", function () {
-        contactButton.style.opacity = "1";
-        contactButton.style.pointerEvents = "auto";
-    });
+// Function to show the contact button
+function showButton() {
+    contactButton.style.opacity = '1';
+    contactButton.style.pointerEvents = 'auto';
+}
 
-    imageSection.addEventListener("mouseleave", function () {
-        // Delay before fading out to avoid immediate disappearance
-        setTimeout(function () {
-            contactButton.style.opacity = "0";
-            contactButton.style.pointerEvents = "none";
-        }, 100); // Adjust delay as needed (in milliseconds)
-    });
-});
+// Function to hide the contact button instantly
+function hideButton() {
+    contactButton.style.opacity = '0';
+    contactButton.style.pointerEvents = 'none';
+}
+
+// Add event listeners to the image section
+imageSection.addEventListener('mouseenter', showButton);
+imageSection.addEventListener('mouseleave', hideButton);
