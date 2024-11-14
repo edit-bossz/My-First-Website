@@ -169,7 +169,7 @@ p {
     border-top: 2px solid #fff;
 }
 .footer a {
-    color: rgb(255, 0, 0);  /* Makes the footer link white */
+    color: rgb(55, 255, 0);  /* Makes the footer link white */
     text-decoration: none;  /* Optional, removes underline */
 }
 
