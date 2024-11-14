@@ -157,13 +157,17 @@ p {
 
 /* Footer styling */
 .footer {
+    width: 100%;           /* Ensure it spans the full width */
     text-align: center;
-    padding: 20px 0;  /* Increase padding for more space */
+    padding: 20px 0;       /* Increase padding for more space */
     background-color: #007bff;
     color: white;
-    font-size: 16px;  /* Increase font size */
-    line-height: 1.6;  /* Increase line height */
+    font-size: 16px;
+    line-height: 1.6;
+    box-sizing: border-box; /* Prevents padding from adding extra width */
+    margin: 0;              /* Remove any default margin */
 }
+
 
 /* Mobile-specific contact button */
 #mobile-contact {
