@@ -170,3 +170,14 @@ p {
         display: block; /* Ensure the button stays visible on mobile */
     }
 }
+/* Mobile-specific styling for the contact button */
+@media (max-width: 600px) {
+    #contact-button {
+        display: block; /* Ensure it's always visible */
+        opacity: 1;
+        position: fixed; /* Fix to viewport */
+        bottom: 20px; /* Position 20px from the bottom */
+        right: 20px; /* Position 20px from the right edge */
+        transition: none; /* Remove any hover transition */
+    }
+    }
