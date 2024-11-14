@@ -91,8 +91,8 @@ p {
 .link-section a {
     width: 100%; /* Ensures links take up full width on mobile */
     display: flex;
-    align-items: center;
-    justify-content: center; /* Centers text and icon */
+    align-items: center; /* Vertically align the text and icon */
+    justify-content: flex-start; /* Align them to the left */
     background-color: #ffdf00;
     color: black;
     padding: 10px 20px;
@@ -101,7 +101,7 @@ p {
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s;
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 .link-section a:hover {
@@ -116,6 +116,7 @@ p {
     width: 30px;  /* Size of the icon */
     height: 30px;
     margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Ensure the icon is vertically aligned with text */
 }
 
 /* Image section styling */
