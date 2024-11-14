@@ -202,7 +202,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: radial-gradient(circle, #ff7e5f, #feb47b); /* Change colors as needed */
-    height: 100vh;
-    margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Change colors as needed */
+    height: 100vh; /* Ensures the gradient fills the entire viewport */
+    margin: 0; /* Removes default margin */
 }
