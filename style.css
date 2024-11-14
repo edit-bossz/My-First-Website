@@ -152,6 +152,14 @@ p {
     transform: scale(1.1);
 }
 
+/* Always visible on mobile devices */
+@media (max-width: 768px) {
+    #contact-button {
+        opacity: 1; /* Make sure it's visible on mobile */
+        pointer-events: auto; /* Enable interaction */
+    }
+}
+
 /* Footer styling */
 .footer {
     text-align: center;
