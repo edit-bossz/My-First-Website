@@ -19,3 +19,9 @@ function hideButton() {
 // Add event listeners to the image section
 imageSection.addEventListener('mouseenter', showButton);
 imageSection.addEventListener('mouseleave', hideButton);
+
+if (window.innerWidth <= 768) {
+    document.getElementById("contact-button").setAttribute("href", "https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com");
+} else {
+    document.getElementById("contact-button").setAttribute("href", "mailto:editprime7@gmail.com");
+}
