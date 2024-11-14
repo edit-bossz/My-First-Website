@@ -99,6 +99,7 @@ p {
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s;
+    text-align: center;
 }
 
 .link-section a:hover {
