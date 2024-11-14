@@ -111,7 +111,7 @@ p {
 
 /* Contact button styling */
 #contact-button {
-    position: fixed;
+    position: fixed; /* Keep the button fixed at the bottom right */
     bottom: 20px;
     right: 20px;
     background-color: #333;
@@ -120,14 +120,19 @@ p {
     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
-    opacity: 0; /* Hide initially */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out transition */
-    pointer-events: none; /* Disable interaction when hidden */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s; /* Smooth transition for opacity */
+    pointer-events: none; /* Disable interaction when the button is hidden */
 }
 
 #contact-button:hover {
     background-color: #007bff;
     transform: scale(1.1);
+}
+
+.image-section:hover #contact-button {
+    opacity: 1; /* Fade in when the image section is hovered */
+    pointer-events: auto; /* Enable interaction when the button is visible */
 }
 
 /* Footer styling */
