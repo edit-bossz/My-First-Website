@@ -23,9 +23,18 @@ imageSection.addEventListener('mouseleave', hideButton);
 imageSection.addEventListener('touchstart', showButton);
 imageSection.addEventListener('touchend', hideButton);
 
-window.onload = function() {
+// Function to update the footer contact link based on screen size
+function updateContactLink() {
     const contactLink = document.getElementById('footer-contact-link').querySelector('a');
     if (window.innerWidth <= 768) {
+        // Mobile link
         contactLink.href = "intent://send?to=editprime7@gmail.com&subject=Subject&body=Body#Intent;scheme=mailto;package=com.google.android.gm;end";
+    } else {
+        // Desktop link
+        contactLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com";
     }
-};
+}
+
+// Call the function on page load and whenever the window is resized
+window.addEventListener('load', updateContactLink);
+window.addEventListener('resize', updateContactLink);
