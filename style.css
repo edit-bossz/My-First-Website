@@ -75,7 +75,8 @@ p {
 }
 
 .link-section a {
-    display: inline-block;
+    display: flex;  /* Flexbox for horizontal alignment of the icon and text */
+    align-items: center; /* Vertically center the items */
     background-color: #ffdf00;
     color: black;
     padding: 10px 20px;
@@ -91,6 +92,13 @@ p {
     color: #007bff;
     transform: scale(1.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for social media icons */
+.social-icon {
+    width: 30px;  /* Size of the icon */
+    height: 30px;
+    margin-right: 10px; /* Space between icon and text */
 }
 
 /* Image section styling */
