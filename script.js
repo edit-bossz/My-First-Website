@@ -22,3 +22,10 @@ imageSection.addEventListener('mouseleave', hideButton);
 // Touch events for mobile
 imageSection.addEventListener('touchstart', showButton);
 imageSection.addEventListener('touchend', hideButton);
+
+window.onload = function() {
+    const contactLink = document.getElementById('footer-contact-link').querySelector('a');
+    if (window.innerWidth <= 768) {
+        contactLink.href = "intent://send?to=editprime7@gmail.com&subject=Subject&body=Body#Intent;scheme=mailto;package=com.google.android.gm;end";
+    }
+};
