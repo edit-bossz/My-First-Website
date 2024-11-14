@@ -21,7 +21,7 @@ imageSection.addEventListener('mouseenter', showButton);
 imageSection.addEventListener('mouseleave', hideButton);
 
 if (window.innerWidth <= 768) {
-    document.getElementById("contact-button").setAttribute("href", "https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com");
+    document.getElementById("contact-button").setAttribute("href", "intent://send?to=editprime7@gmail.com&subject=Subject&body=Body#Intent;scheme=mailto;package=com.google.android.gm;end");
 } else {
-    document.getElementById("contact-button").setAttribute("href", "mailto:editprime7@gmail.com");
+    document.getElementById("contact-button").setAttribute("href", "https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com");
 }
