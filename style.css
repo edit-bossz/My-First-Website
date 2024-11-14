@@ -101,7 +101,7 @@ p {
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s;
-    text-align: center;
+    text-align: left;
 }
 
 .link-section a:hover {
