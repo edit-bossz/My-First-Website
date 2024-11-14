@@ -201,3 +201,8 @@ p {
 html {
     scroll-behavior: smooth;
 }
+body {
+    background: radial-gradient(circle, #ff7e5f, #feb47b); /* Change colors as needed */
+    height: 100vh;
+    margin: 0;
+}
