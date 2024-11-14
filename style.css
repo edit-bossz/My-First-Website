@@ -158,10 +158,11 @@ p {
 /* Footer styling */
 .footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;  /* Increase padding for more space */
     background-color: #007bff;
     color: white;
-    font-size: 14px;
+    font-size: 16px;  /* Increase font size */
+    line-height: 1.6;  /* Increase line height */
 }
 
 /* Mobile-specific contact button */
