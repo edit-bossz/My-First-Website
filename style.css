@@ -145,7 +145,7 @@ p {
     opacity: 0; /* Initially hidden */
     transition: opacity 0.1s ease-in-out; /* Smooth transition for fade-in */
     pointer-events: none; /* Disable interaction when hidden */
-    z-index: 1; /* Make sure it stays on top */
+    z-index: 9999; /* Make sure it stays on top of all elements */
 }
 
 /* Hover effect for desktop */
@@ -162,10 +162,16 @@ p {
     }
 }
 
-/* Ensure image-section does not interfere with button click */
+/* Ensure image section does not block the contact button */
 .image-section {
     position: relative;
-    z-index: 9999; /* Lower than contact button */
+    z-index: 1; /* Lower than contact button */
+}
+
+/* Ensure body does not have any overflow issues */
+body {
+    position: relative;
+    z-index: 0; /* Ensure body is behind the contact button */
 }
 
 
