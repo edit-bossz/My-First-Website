@@ -120,8 +120,9 @@ p {
     border-radius: 30px; /* Round the corners of the button */
     text-decoration: none; /* Remove underline from the link */
     font-size: 16px; /* Set font size */
-    opacity: 0; /* Initially hide the button */
-    transition: opacity 0.5s ease-in-out, background-color 0.3s, transform 0.3s; /* Smooth transitions for opacity (slower), background, and scaling */
+    opacity: 0; /* Initially transparent */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, background-color 0.3s, transform 0.3s; /* Smooth transition for opacity, visibility, background, and scaling */
     pointer-events: none; /* Disable interaction when the button is hidden */
 }
 
@@ -133,6 +134,7 @@ p {
 /* Make the button visible when the image section is hovered */
 .image-section:hover #contact-button {
     opacity: 1; /* Gradually make the button visible */
+    visibility: visible; /* Make the button visible */
     pointer-events: auto; /* Enable interaction when the button is visible */
 }
 
