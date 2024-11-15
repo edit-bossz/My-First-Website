@@ -266,7 +266,8 @@ body {
 #back-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the button's width */
     background: #007bff;
     color: white;
     border: none;
