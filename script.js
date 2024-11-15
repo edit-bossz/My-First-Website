@@ -121,9 +121,7 @@ document.getElementById("back-to-top").addEventListener("click", function() {
 
 
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
+document.getElementById("send-message").addEventListener("click", function(event) {
     // Get form data
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -132,18 +130,23 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
     // Encode the data to ensure it's properly handled in the URL
     const encodedSubject = encodeURIComponent(subject);
-    const encodedMessage = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
+    const encodedMessage = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-    // Prepare the body with proper line breaks
-    const bodyContent = `Subject: ${subject}\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    // Mobile Gmail Intent URL
+    const mobileEmailLink = `intent://send?to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}#Intent;scheme=mailto;package=com.google.android.gm;end`;
 
-    // Gmail compose URL
-    const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&body=${encodeURIComponent(bodyContent)}`;
+    // Desktop Gmail URL (for browsers)
+    const desktopEmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}`;
 
-    // Open the Gmail compose screen in a new tab
-    window.open(emailLink, '_blank');  // Open Gmail in a new tab
+    // Detect if the user is on a mobile device
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    // Open the appropriate link based on the device type
+    if (isMobile) {
+        window.location.href = mobileEmailLink;  // Open Gmail on mobile with the composed message
+    } else {
+        window.open(desktopEmailLink, '_blank');  // Open Gmail in a new tab on desktop
+    }
 });
 
 // Get the button and form elements
