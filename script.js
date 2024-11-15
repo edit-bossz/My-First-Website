@@ -79,7 +79,7 @@ document.querySelector('a[href="#links"]').addEventListener('click', function (e
 
     // Add a light red highlight
     targetSection.style.transition = 'background-color 0.5s ease'; // Smooth transition
-    targetSection.style.backgroundColor = 'lightcoral'; // Light red color
+    targetSection.style.backgroundColor = '#b5f59a'; // Light red color
 
     // Remove the highlight after a delay
     setTimeout(() => {
