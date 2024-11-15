@@ -105,7 +105,7 @@ document.getElementById("back-to-top").addEventListener("click", function() {
 
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent form from submitting normally
 
     // Get the form data
     const name = document.getElementById("name").value;
@@ -113,17 +113,18 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
 
-    // Create the email subject and body content
+    // Encode the subject and message to ensure special characters are handled properly
     const subjectEncoded = encodeURIComponent(subject);
     const messageEncoded = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
 
-    // Create the links for desktop and mobile
+    // Create the links for desktop (Gmail web) and mobile (Gmail app)
     const desktopLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${subjectEncoded}&body=${messageEncoded}`;
     const mobileLink = `intent://send?to=editprime7@gmail.com&subject=${subjectEncoded}&body=${messageEncoded}#Intent;scheme=mailto;package=com.google.android.gm;end`;
 
     // Detect if the user is on mobile or desktop
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-    // Open the appropriate link based on the device
-    window.location.href = isMobile ? mobileLink : desktopLink;
+    // Open the appropriate link in a new tab
+    const link = isMobile ? mobileLink : desktopLink;
+    window.open(link, '_blank'); // Opens in a new tab
 });
