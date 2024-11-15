@@ -89,7 +89,7 @@ document.querySelector('a[href="#links"]').addEventListener('click', function (e
 
 window.addEventListener("scroll", function() {
     const topButton = document.getElementById("back-to-top");
-    if (window.scrollY > 500) {
+    if (window.scrollY > 600) {
         topButton.style.display = "block";
     } else {
         topButton.style.display = "none";
