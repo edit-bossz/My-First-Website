@@ -361,7 +361,7 @@ body {
 #close-form-btn {
     display: block; /* Make the button a block element */
     margin-top: 20px; /* Add space above the button */
-    margin: 5px; /* Automatically adjust left margin */
+    margin: 10px; /* Automatically adjust left margin */
     text-align: center; /* Center text inside the button */
     width: max-content; /* Ensure the button only takes as much width as needed */
 }
