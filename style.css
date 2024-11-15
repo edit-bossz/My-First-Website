@@ -222,7 +222,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background-color:#aaff00; 
+    background-color:#ff0080; 
     color: white;
     padding: 10px 0;
     z-index: 1000;  /* Ensure the navbar stays on top */
