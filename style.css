@@ -267,6 +267,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column; /* Stack items vertically on small screens */
