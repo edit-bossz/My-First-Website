@@ -272,7 +272,7 @@ body {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
+    width: 30px;
     height: 50px;
     display: none; /* Hidden initially */
     cursor: pointer;
