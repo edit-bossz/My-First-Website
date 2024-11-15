@@ -49,3 +49,21 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
         target.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// Function to open multiple links
+function openMultipleLinks() {
+    window.open('https://github.com/edit-bossz', '_blank'); // GitHub
+    window.open('https://orcid.org/0009-0009-4169-8752', '_blank'); // ORCID
+}
+
+// Function to highlight the links section
+function highlightSection() {
+    const section = document.querySelector('.link-section');
+    section.style.transition = 'background-color 0.5s';
+    section.style.backgroundColor = '#ffef99'; // Highlight color
+
+    // Remove the highlight after a short delay
+    setTimeout(() => {
+        section.style.backgroundColor = '';
+    }, 1000);
+}
