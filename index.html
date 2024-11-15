@@ -63,6 +63,18 @@
     <a href="intent://send?to=editprime7@gmail.com&subject=Subject&body=Body#Intent;scheme=mailto;package=com.google.android.gm;end" target="_blank">Contact</a>
 </div>
     </div>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>    
     <footer class="footer">
         <p>&copy; <span id="year"></span> Mayukh Roy. All rights reserved.</p>
         <p>Contact Me: <span id="footer-contact-link"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com" class="contact-link">editprime7@gmail.com</a></span></p>
