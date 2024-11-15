@@ -130,13 +130,14 @@ document.getElementById("send-message").addEventListener("click", function(event
 
     // Encode the data to ensure it's properly handled in the URL
     const encodedSubject = encodeURIComponent(subject);
-    const encodedMessage = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const encodedMessage = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage:\n${message}`);
 
     // Mobile Gmail Intent URL
     const mobileEmailLink = `intent://send?to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}#Intent;scheme=mailto;package=com.google.android.gm;end`;
 
     // Desktop Gmail URL (for browsers)
     const desktopEmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}`;
+
     // Detect if the user is on a mobile device
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
