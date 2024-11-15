@@ -63,18 +63,42 @@
     <a href="intent://send?to=editprime7@gmail.com&subject=Subject&body=Body#Intent;scheme=mailto;package=com.google.android.gm;end" target="_blank">Contact</a>
 </div>
     </div>
-    <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send</button>
-    </form>    
+    <body>
+        <header>
+            <!-- Header Content -->
+        </header>
+    
+        <nav>
+            <!-- Navbar Content -->
+        </nav>
+    
+        <!-- Main Content Section -->
+        <div class="container">
+            <!-- Other sections here -->
+        </div>
+    
+        <!-- Contact Form Section (before Footer) -->
+        <section class="contact-form-section">
+            <h2>Contact Us</h2>
+            <form action="your-server-endpoint" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </footer>
+    </body>       
     <footer class="footer">
         <p>&copy; <span id="year"></span> Mayukh Roy. All rights reserved.</p>
         <p>Contact Me: <span id="footer-contact-link"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com" class="contact-link">editprime7@gmail.com</a></span></p>
