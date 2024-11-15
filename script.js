@@ -102,3 +102,28 @@ window.addEventListener("scroll", function() {
 document.getElementById("back-to-top").addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get the form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // Create the email subject and body content
+    const subjectEncoded = encodeURIComponent(subject);
+    const messageEncoded = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+
+    // Create the links for desktop and mobile
+    const desktopLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${subjectEncoded}&body=${messageEncoded}`;
+    const mobileLink = `intent://send?to=editprime7@gmail.com&subject=${subjectEncoded}&body=${messageEncoded}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+
+    // Detect if the user is on mobile or desktop
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    // Open the appropriate link based on the device
+    window.location.href = isMobile ? mobileLink : desktopLink;
+});
