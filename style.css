@@ -282,29 +282,80 @@ body {
     background: #0056b3;
 }
 
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 20px auto;
+/* Contact Form Section Styling */
+.contact-form-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#contact-form input, #contact-form textarea {
-    margin: 10px 0;
+/* Contact Form heading */
+.contact-form-section h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Input styling */
+.contact-form-section label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
     padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
-#contact-form button {
-    background-color: #00bcd4;
+.contact-form-section button {
+    background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#contact-form button:hover {
-    background-color: #007bff;
+.contact-form-section button:hover {
+    background-color: #003366;
+}
+
+/* Ensure the form doesn't extend too wide */
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 20px;
+    }
+
+    .contact-form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form-section input,
+    .contact-form-section textarea {
+        font-size: 14px;
+    }
+
+    .contact-form-section button {
+        font-size: 14px;
+    }
 }
