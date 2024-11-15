@@ -80,21 +80,22 @@ document.getElementById("education-link").addEventListener("click", function () 
 });
 
 document.querySelector('a[href="#links"]').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default link behavior
-
+    event.preventDefault(); // Prevent the default link behavior
     const targetSection = document.querySelector('#links'); // Select the links section
 
     // Scroll smoothly to the target section and center it on the screen
     targetSection.scrollIntoView({
-        behavior: 'smooth', // Smooth scrolling
-        block: 'center'     // Align section to the center of the screen
+        behavior: 'smooth',
+        block: 'center'
     });
 
-    // Highlight the section with a light red background
-    targetSection.classList.add('highlight');
+    // Add a light red highlight
+    targetSection.style.transition = 'background-color 0.5s ease'; // Smooth transition
+    targetSection.style.backgroundColor = 'lightcoral'; // Light red color
 
-    // Remove the highlight after 1 second
+    // Remove the highlight after a delay
     setTimeout(() => {
-        targetSection.classList.remove('highlight');
-    }, 1000);
+        targetSection.style.backgroundColor = ''; // Reset to default
+    }, 1000); // Highlight duration: 1 second
 });
+
