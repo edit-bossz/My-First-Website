@@ -8,53 +8,51 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #007bff, #80deea); /* Gradient background */
+    background-color: #f4f4f4;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
 }
 
 /* Header styling */
 header {
-    background-color: #80deea; /* Vibrant blue background */
+    background-color: #80deea;  /* A vibrant blue background */
     color: white;
-    padding: 25px 0; /* Ample top and bottom padding */
+    padding: 25px 0;  /* Increased top and bottom padding for more space */
     text-align: center;
-    border-bottom: 2px solid #ffffff; /* Thin white border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 2px solid #ffffff;  /* Thinner border for a cleaner look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for subtle depth */
+    margin-bottom: 40px;  /* Increased margin below header for more breathing space */
 }
 
 /* Main heading styling */
 header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    padding: 10px 25px;
+    font-size: 2rem;  /* Slightly smaller font size for less density */
+    font-weight: bold;  /* Keep the bold text */
+    letter-spacing: 0.5px;  /* Reduced letter spacing for a more compact appearance */
+    padding: 10px 25px;  /* Reduced padding to make it less heavy */
     display: inline-block;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    border-radius: 5px;  /* Smaller border radius for a less round look */
+    background-color: rgba(0, 0, 0, 0.2);  /* Slightly darker transparent background */
+    transition: all 0.3s ease-in-out;  /* Smooth hover effect */
 }
 
 /* Hover effect on the title */
 header h1:hover {
-    background-color: #003366;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #003366;  /* Darker background on hover */
+    transform: translateY(-3px);  /* Slight lift effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Soft shadow on hover */
 }
 
-/* Navbar styling */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Container styling */
+.container {
+    flex: 1;
+    padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Section styling */
@@ -91,18 +89,19 @@ p {
 }
 
 .link-section a {
-    width: 100%;
+    width: 100%; /* Ensures links take up full width on mobile */
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center; /* Vertically aligns the icon and text */
+    justify-content: flex-start; /* Aligns items to the left */
     background-color: #ffdf00;
     color: black;
     padding: 10px 20px;
     text-decoration: none;
-    margin: 10px 0;
+    margin: 10px 0; /* Adds margin between each link for better spacing */
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s;
+    text-align: left;
 }
 
 .link-section a:hover {
@@ -114,10 +113,10 @@ p {
 
 /* Styling for social media icons */
 .social-icon {
-    width: 30px;
+    width: 30px; /* Size of the icon */
     height: 30px;
-    margin-right: 10px;
-    flex-shrink: 0;
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevents the icon from shrinking */
 }
 
 /* Image section styling */
@@ -147,10 +146,10 @@ p {
     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out;
-    pointer-events: none;
-    z-index: 9999;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.1s ease-in-out; /* Smooth transition for fade-in */
+    pointer-events: none; /* Disable interaction when hidden */
+    z-index: 9999; /* Make sure it stays on top of all elements */
 }
 
 /* Hover effect for desktop */
@@ -162,28 +161,26 @@ p {
 /* Footer styling */
 .footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0;  /* Increase padding for more space */
     background-color: #80deea;
     color: white;
-    font-size: 16px;
-    line-height: 1.6;
-    border-top: 2px solid #fff; /* White top border */
+    font-size: 16px;  /* Increase font size */
+    line-height: 1.6;  /* Increase line height */
+    border-top: 2px solid #fff;
 }
-
-/* Footer link styling */
 .footer a {
-    color: white;
-    text-decoration: none;
+    color: #036774;  /* Makes the footer link white */
+    text-decoration: none;  /* Optional, removes underline */
 }
 
 .footer a:hover {
-    color: #ffdf00;
-    text-decoration: underline;
+    color: #ffdf00;  /* Optional, changes color on hover */
+    text-decoration: underline;  /* Optional, adds underline on hover */
 }
 
 /* Mobile-specific contact button */
 #mobile-contact {
-    display: none;
+    display: none; /* Hidden by default */
 }
 
 #mobile-contact a {
@@ -204,11 +201,82 @@ p {
     #mobile-contact {
         display: block;
     }
+}
+/* Hide the desktop contact button on mobile */
+@media (max-width: 768px) {
     #contact-button {
         display: none !important;
     }
 }
-
 html {
     scroll-behavior: smooth;
+}
+body {
+    background-color: #f5f5f5;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Ensure header and navbar are stacked */
+.header {
+    background-color: #333; /* Example background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: #444; /* Navbar background color */
+    color: white;
+    margin: 0; /* Remove any margin around the navbar */
+    padding: 10px 0;
+    position: sticky; /* Ensures navbar sticks under the header */
+    top: 0; /* Sticks it at the top of the viewport when scrolling */
+    z-index: 10; /* Keeps it above other content */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffdf00; /* Hover effect */
+}
+
+/* Optional: Add spacing to separate the header from the navbar if needed */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Add spacing for better readability */
+    }
+}
+.navbar ul li a.active {
+    color: #ffdf00; /* Highlighted color */
 }
