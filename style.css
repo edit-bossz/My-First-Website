@@ -255,11 +255,11 @@ body {
 /* For mobile screens */
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;  /* Align items side by side */
+        justify-content: center;  /* Center the items */
     }
     .navbar ul li {
-        margin: 10px 0;
+        margin: 0 15px;  /* Add some space between the items */
     }
 }
 
