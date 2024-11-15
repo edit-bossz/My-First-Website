@@ -107,24 +107,29 @@ document.getElementById("back-to-top").addEventListener("click", function() {
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form from submitting normally
 
-    // Get the form data
+    // Get form data
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
 
-    // Encode the subject and message to ensure special characters are handled properly
-    const subjectEncoded = encodeURIComponent(subject);
-    const messageEncoded = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+    // Encode the data to ensure it's properly handled in the URL
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedMessage = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
 
-    // Create the links for desktop (Gmail web) and mobile (Gmail app)
-    const desktopLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${subjectEncoded}&body=${messageEncoded}`;
-    const mobileLink = `intent://send?to=editprime7@gmail.com&subject=${subjectEncoded}&body=${messageEncoded}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+    // Prepare the body with the subject in the message box
+    const bodyContent = `Subject: ${subject}\n\n${encodedMessage}`;
+
+    // Gmail compose URL
+    const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&body=${bodyContent}`;
 
     // Detect if the user is on mobile or desktop
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-    // Open the appropriate link in a new tab
-    const link = isMobile ? mobileLink : desktopLink;
-    window.open(link, '_blank'); // Opens in a new tab
+    // Open the Gmail compose screen in a new tab
+    window.open(emailLink, '_blank');  // Open Gmail in a new tab
+
+    // Note: Gmail may prompt to sign in if the user is not logged in.
 });
