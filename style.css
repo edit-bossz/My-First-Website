@@ -268,8 +268,8 @@ body {
     bottom: 20px;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for the button's width */
-    background: #007bff;
-    color: white;
+    background: #ffffff;
+    color: black;
     border: none;
     border-radius: 50%;
     width: 35px;
