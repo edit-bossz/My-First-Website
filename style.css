@@ -17,7 +17,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #ff0051;  /* A vibrant blue background */
+    background: linear-gradient(to right, #00a2ff, #eb1e51);  /* A vibrant blue background */
     color: white;
     padding: 25px 0;  /* Increased top and bottom padding for more space */
     text-align: center;
