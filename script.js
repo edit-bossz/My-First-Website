@@ -87,3 +87,15 @@ document.querySelector('a[href="#links"]').addEventListener('click', function (e
     }, 1000); // Highlight duration: 1 second
 });
 
+window.addEventListener("scroll", function() {
+    const topButton = document.getElementById("back-to-top");
+    if (window.scrollY > 300) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+});
+
+document.getElementById("back-to-top").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
