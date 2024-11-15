@@ -137,7 +137,6 @@ document.getElementById("send-message").addEventListener("click", function(event
 
     // Desktop Gmail URL (for browsers)
     const desktopEmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}`;
-
     // Detect if the user is on a mobile device
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
