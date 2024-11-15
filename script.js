@@ -121,7 +121,9 @@ document.getElementById("back-to-top").addEventListener("click", function() {
 
 
 
-document.getElementById("send-message").addEventListener("click", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+
     // Get form data
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -130,42 +132,26 @@ document.getElementById("send-message").addEventListener("click", function(event
 
     // Encode the data to ensure it's properly handled in the URL
     const encodedSubject = encodeURIComponent(subject);
-    const encodedMessage = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const encodedMessage = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
 
-    // Mobile Gmail Intent URL
-    const mobileEmailLink = `intent://send?to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+    // Prepare the body with proper line breaks
+    const bodyContent = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-    // Desktop Gmail URL (for browsers)
-    const desktopEmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}`;
-
-    // Detect if the user is on a mobile device
+    // Check if we are on mobile or desktop
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-    // Open the appropriate link based on the device type
+    
+    // Gmail compose URL for desktop or mobile
+    let emailLink;
     if (isMobile) {
-        window.location.href = mobileEmailLink;  // Open Gmail on mobile with the composed message
+        // Mobile (Android)
+        emailLink = `intent://send?to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}#Intent;scheme=mailto;package=com.google.android.gm;end`;
     } else {
-        window.open(desktopEmailLink, '_blank');  // Open Gmail in a new tab on desktop
+        // Desktop
+        emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodeURIComponent(bodyContent)}`;
     }
-});
 
-// Get the button and form elements
-const toggleBtn = document.getElementById('contact-toggle-btn');
-const contactForm = document.getElementById('contact-form');
-const closeFormBtn = document.getElementById('close-form-btn');
-
-// Add click event listener to the "Contact Me" button
-toggleBtn.addEventListener('click', function() {
-    // Show the form and close button, hide the "Contact Me" button
-    contactForm.style.display = 'block';
-    toggleBtn.style.display = 'none';
-    closeFormBtn.style.display = 'inline-block';  // Show the close button
-});
-
-// Add click event listener to the "Close Contact Form" button
-closeFormBtn.addEventListener('click', function() {
-    // Hide the form and close button, show the "Contact Me" button
-    contactForm.style.display = 'none';
-    toggleBtn.style.display = 'inline-block';  // Show the "Contact Me" button
-    closeFormBtn.style.display = 'none';  // Hide the close button
+    // Open the Gmail compose screen in a new tab or via the intent on mobile
+    window.open(emailLink, '_blank');
 });
