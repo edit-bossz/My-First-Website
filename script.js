@@ -63,16 +63,7 @@ function openMultipleLinks() {
 }
 
 
-document.querySelector('a[href="#links"]').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent the default link behavior
-    const targetSection = document.querySelector('#links'); // Select the links section
 
-    // Scroll smoothly to the target section and center it on the screen
-    targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-    });
-})
 
 
 document.getElementById("education-link").addEventListener("click", function () {
