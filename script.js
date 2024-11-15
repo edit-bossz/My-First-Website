@@ -67,7 +67,7 @@ function openMultipleLinks() {
 function highlightSection() {
     const section = document.querySelector('.link-section');
     section.style.transition = 'background-color 0.5s';
-    section.style.backgroundColor = '#f95954'; // Highlight color
+    section.style.backgroundColor = '#b5f59a'; // Highlight color
 
     // Remove the highlight after a short delay
     setTimeout(() => {
