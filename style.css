@@ -357,6 +357,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* Close Contact Form Button */
+#close-form-btn {
+    display: block; /* Make the close button a block element, so it appears on a new line */
+    margin-top: 20px; /* Optional: Add some space above the button */
+}
+
 
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
