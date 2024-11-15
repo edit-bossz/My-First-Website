@@ -19,9 +19,11 @@ body {
 header {
     background-color: #80deea;  /* A vibrant blue background */
     color: white;
+    padding: 25px 0;  /* Increased top and bottom padding for more space */
     text-align: center;
     border-bottom: 2px solid #ffffff;  /* Thinner border for a cleaner look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for subtle depth */
+    margin-bottom: 40px;  /* Increased margin below header for more breathing space */
 }
 
 /* Main heading styling */
