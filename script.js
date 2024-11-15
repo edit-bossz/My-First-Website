@@ -119,17 +119,12 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     );
 
-    // Prepare the body with the subject in the message box
-    const bodyContent = `Subject: ${subject}\n\n${encodedMessage}`;
+    // Prepare the body with proper line breaks
+    const bodyContent = `Subject: ${subject}\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
     // Gmail compose URL
-    const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&body=${bodyContent}`;
-
-    // Detect if the user is on mobile or desktop
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&body=${encodeURIComponent(bodyContent)}`;
 
     // Open the Gmail compose screen in a new tab
     window.open(emailLink, '_blank');  // Open Gmail in a new tab
-
-    // Note: Gmail may prompt to sign in if the user is not logged in.
 });
