@@ -222,7 +222,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #333;  /* Dark background */
+    background: linear-gradient(to right, #00a2ff, #eb1e51); 
     color: white;
     padding: 10px 0;
     z-index: 1000;  /* Ensure the navbar stays on top */
