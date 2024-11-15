@@ -252,12 +252,6 @@ body {
     color: #ffdf00;  /* Highlight links on hover */
 }
 
-/* Highlight class */
-.highlight {
-    background-color: #ff0000; /* Light red */
-    transition: background-color 0.5s ease; /* Smooth fade-out effect */
-}
-
 /* For mobile screens */
 @media (max-width: 768px) {
     .navbar ul {
