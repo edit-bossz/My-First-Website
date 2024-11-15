@@ -254,7 +254,7 @@ body {
 
 /* Highlight class */
 .highlight {
-    background-color: rgba(245, 116, 116, 0.2); /* Light red */
+    background-color: #ff0000; /* Light red */
     transition: background-color 0.5s ease; /* Smooth fade-out effect */
 }
 
