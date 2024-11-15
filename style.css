@@ -419,3 +419,17 @@ body {
     font-size: 1.1rem;
     color: #007bff;
 }
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 20px;
+    }
+
+    .testimonial {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .testimonials-section h2 {
+        font-size: 1.5rem;
+    }
+}
