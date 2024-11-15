@@ -217,3 +217,49 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+
+/* Navigation Bar Styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;  /* Dark background */
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;  /* Ensure the navbar stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+    margin-bottom: 20px;  /* Space between navbar and content */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffdf00;  /* Highlight links on hover */
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
