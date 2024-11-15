@@ -74,3 +74,7 @@ function highlightSection() {
         section.style.backgroundColor = '';
     }, 1000);
 }
+
+document.getElementById("education-link").addEventListener("click", function () {
+    window.open("https://southpoint.ac.in/", "_blank"); // Opens in a new tab
+});
