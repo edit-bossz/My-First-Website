@@ -73,15 +73,6 @@ document.querySelector('a[href="#links"]').addEventListener('click', function (e
         block: 'center'
     });
 
-    // Add a green highlight
-    targetSection.style.transition = 'background-color 0.5s ease'; // Smooth transition
-    targetSection.style.backgroundColor = '#b5f59a';
-
-    // Remove the highlight after a delay
-    setTimeout(() => {
-        targetSection.style.backgroundColor = ''; // Reset to default
-    }, 1000); // Highlight duration: 1 second
-});
 
 
 document.getElementById("education-link").addEventListener("click", function () {
