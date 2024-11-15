@@ -217,3 +217,53 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+/* General Navigation Bar Styling */
+.navbar {
+    position: sticky; /* Sticks to the top while scrolling */
+    top: 0; /* Position relative to top of the viewport */
+    background: #333333; /* Dark background color */
+    padding: 10px 0; /* Space above and below the nav bar */
+    z-index: 1000; /* Ensures the navbar stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styling the List */
+.navbar ul {
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the list items sit horizontally */
+    justify-content: center; /* Centers the nav links */
+}
+
+/* Styling the List Items */
+.navbar ul li {
+    margin: 0 15px; /* Space between the links */
+}
+
+/* Styling the Links */
+.navbar ul li a {
+    text-decoration: none; /* Removes underlines */
+    color: white; /* White text */
+    font-size: 16px; /* Comfortable text size */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover Effect */
+.navbar ul li a:hover {
+    color: #00bcd4; /* Light blue color when hovered */
+}
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Add spacing for better readability */
+    }
+}
+.navbar ul li a.active {
+    color: #ffdf00; /* Highlighted color */
+}
