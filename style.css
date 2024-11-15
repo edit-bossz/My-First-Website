@@ -386,3 +386,36 @@ body {
         font-size: 14px;
     }
 }
+
+/* Testimonials Section Styling */
+.testimonials-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.testimonials-section h2 {
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial strong {
+    font-size: 1.1rem;
+    color: #007bff;
+}
