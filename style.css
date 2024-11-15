@@ -268,12 +268,12 @@ body {
     bottom: 20px;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for the button's width */
-    background: #ff0000;
+    background: #fffb00;
     color: black;
     border: 1px solid black;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: none; /* Hidden initially */
     cursor: pointer;
     font-size: 20px;
