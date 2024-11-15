@@ -128,3 +128,19 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     // Open the Gmail compose screen in a new tab
     window.open(emailLink, '_blank');  // Open Gmail in a new tab
 });
+
+ // Get the button and form elements
+ const toggleBtn = document.getElementById('contact-toggle-btn');
+ const contactForm = document.getElementById('contact-form');
+
+ // Add click event listener to the button
+ toggleBtn.addEventListener('click', function() {
+     // Toggle the visibility of the form
+     if (contactForm.style.display === 'none') {
+         contactForm.style.display = 'block';
+         toggleBtn.textContent = 'Close Contact Form'; // Change button text
+     } else {
+         contactForm.style.display = 'none';
+         toggleBtn.textContent = 'Contact Me'; // Revert button text
+     }
+ });
