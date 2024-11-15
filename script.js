@@ -92,16 +92,33 @@ document.querySelector('a[href="#links"]').addEventListener('click', function (e
 
 window.addEventListener("scroll", function() {
     const topButton = document.getElementById("back-to-top");
+    const footer = document.querySelector("footer"); // Adjust this selector if needed
+
+    // Check if the button should appear
     if (window.scrollY > 600) {
         topButton.style.display = "block";
     } else {
         topButton.style.display = "none";
+    }
+
+    // Check the position of the footer to prevent the button from scrolling into it
+    const footerRect = footer.getBoundingClientRect();
+    const buttonHeight = topButton.offsetHeight;
+    
+    // Stop the button when it's near the footer
+    if (footerRect.top <= window.innerHeight && window.scrollY + window.innerHeight >= footerRect.top + buttonHeight) {
+        topButton.style.position = "absolute";
+        topButton.style.bottom = (footerRect.height + 20) + "px"; // Adjust the distance as needed
+    } else {
+        topButton.style.position = "fixed";
+        topButton.style.bottom = "20px"; // Default position when not near the footer
     }
 });
 
 document.getElementById("back-to-top").addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
 
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
