@@ -95,7 +95,7 @@ window.addEventListener("scroll", function() {
     const footer = document.querySelector("footer"); // Adjust this selector if needed
 
     // Check if the button should appear
-    if (window.scrollY > 600) {
+    if (window.scrollY > 400) {
         topButton.style.display = "block";
     } else {
         topButton.style.display = "none";
