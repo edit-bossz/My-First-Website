@@ -35,6 +35,9 @@ function updateContactLink() {
     }
 }
 
+//Set year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
 // Call the function on page load and whenever the window is resized
 window.addEventListener('load', updateContactLink);
 window.addEventListener('resize', updateContactLink);
