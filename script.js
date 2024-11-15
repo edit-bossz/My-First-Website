@@ -63,17 +63,26 @@ function openMultipleLinks() {
 }
 
 
-// Function to highlight the links section
-function highlightSection() {
-    const section = document.querySelector('.link-section');
-    section.style.transition = 'background-color 0.5s';
-    section.style.backgroundColor = '#b5f59a'; // Highlight color
+document.querySelector('a[href="#links"]').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+    const targetSection = document.querySelector('#links'); // Select the links section
 
-    // Remove the highlight after a short delay
+    // Scroll smoothly to the target section and center it on the screen
+    targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+
+    // Add a green highlight
+    targetSection.style.transition = 'background-color 0.5s ease'; // Smooth transition
+    targetSection.style.backgroundColor = 'green'; // Green color
+
+    // Remove the highlight after a delay
     setTimeout(() => {
-        section.style.backgroundColor = '';
-    }, 1000);
-}
+        targetSection.style.backgroundColor = ''; // Reset to default
+    }, 1000); // Highlight duration: 1 second
+});
+
 
 document.getElementById("education-link").addEventListener("click", function () {
     window.open("https://southpoint.ac.in/", "_blank"); // Opens in a new tab
