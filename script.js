@@ -129,18 +129,23 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     window.open(emailLink, '_blank');  // Open Gmail in a new tab
 });
 
- // Get the button and form elements
- const toggleBtn = document.getElementById('contact-toggle-btn');
- const contactForm = document.getElementById('contact-form');
+// Get the button and form elements
+const toggleBtn = document.getElementById('contact-toggle-btn');
+const contactForm = document.getElementById('contact-form');
+const closeFormBtn = document.getElementById('close-form-btn');
 
- // Add click event listener to the button
- toggleBtn.addEventListener('click', function() {
-     // Toggle the visibility of the form
-     if (contactForm.style.display === 'none') {
-         contactForm.style.display = 'block';
-         toggleBtn.textContent = 'Close Contact Form'; // Change button text
-     } else {
-         contactForm.style.display = 'none';
-         toggleBtn.textContent = 'Contact Me'; // Revert button text
-     }
- });
+// Add click event listener to the "Contact Me" button
+toggleBtn.addEventListener('click', function() {
+    // Show the form and close button, hide the "Contact Me" button
+    contactForm.style.display = 'block';
+    toggleBtn.style.display = 'none';
+    closeFormBtn.style.display = 'inline-block';  // Show the close button
+});
+
+// Add click event listener to the "Close Contact Form" button
+closeFormBtn.addEventListener('click', function() {
+    // Hide the form and close button, show the "Contact Me" button
+    contactForm.style.display = 'none';
+    toggleBtn.style.display = 'inline-block';  // Show the "Contact Me" button
+    closeFormBtn.style.display = 'none';  // Hide the close button
+});
