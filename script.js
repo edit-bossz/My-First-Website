@@ -51,7 +51,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
 });
 
 
-
+// Function to open multiple links
 function openMultipleLinks() {
     // Open the first link immediately
     window.open('https://github.com/edit-bossz', '_blank');
