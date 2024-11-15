@@ -122,57 +122,57 @@ document.getElementById("back-to-top").addEventListener("click", function() {
 
 
 document.getElementById("contact-form-submit").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
+        event.preventDefault(); // Prevent form from submitting normally
 
-    // Get form data
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+        // Get form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
 
-    // Encode the data to ensure it's properly handled in the URL
-    const encodedSubject = encodeURIComponent(subject);
-    const encodedMessage = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
+        // Encode the data to ensure it's properly handled in the URL
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedMessage = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        );
 
-    // Prepare the body with proper line breaks
-    const bodyContent = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+        // Prepare the body with proper line breaks
+        const bodyContent = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-    // Check if we are on mobile or desktop
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    
-    // Gmail compose URL for desktop or mobile
-    let emailLink;
-    if (isMobile) {
-        // Mobile (Android)
-        emailLink = `intent://send?to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}#Intent;scheme=mailto;package=com.google.android.gm;end`;
-    } else {
-        // Desktop
-        emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodeURIComponent(bodyContent)}`;
-    }
+        // Check if we are on mobile or desktop
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+        
+        // Gmail compose URL for desktop or mobile
+        let emailLink;
+        if (isMobile) {
+            // Mobile (Android)
+            emailLink = `intent://send?to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodedMessage}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+        } else {
+            // Desktop
+            emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=editprime7@gmail.com&subject=${encodedSubject}&body=${encodeURIComponent(bodyContent)}`;
+        }
 
-    // Open the Gmail compose screen in a new tab or via the intent on mobile
-    window.open(emailLink, '_blank');
-});
+        // Open the Gmail compose screen in a new tab or via the intent on mobile
+        window.open(emailLink, '_blank');
+    });
 
-// Get the button and form elements
-const toggleBtn = document.getElementById('contact-toggle-btn');
-const contactForm = document.getElementById('contact-form');
-const closeFormBtn = document.getElementById('close-form-btn');
+    // Get the button and form elements
+    const toggleBtn = document.getElementById('contact-toggle-btn');
+    const contactForm = document.getElementById('contact-form');
+    const closeFormBtn = document.getElementById('close-form-btn');
 
-// Add click event listener to the "Contact Me" button
-toggleBtn.addEventListener('click', function() {
-    // Show the form and close button, hide the "Contact Me" button
-    contactForm.style.display = 'block';
-    toggleBtn.style.display = 'none';
-    closeFormBtn.style.display = 'inline-block';  // Show the close button
-});
+    // Add click event listener to the "Contact Me" button
+    toggleBtn.addEventListener('click', function() {
+        // Show the form and close button, hide the "Contact Me" button
+        contactForm.style.display = 'block';
+        toggleBtn.style.display = 'none';
+        closeFormBtn.style.display = 'inline-block';  // Show the close button
+    });
 
-// Add click event listener to the "Close Contact Form" button
-closeFormBtn.addEventListener('click', function() {
-    // Hide the form and close button, show the "Contact Me" button
-    contactForm.style.display = 'none';
-    toggleBtn.style.display = 'inline-block';  // Show the "Contact Me" button
-    closeFormBtn.style.display = 'none';  // Hide the close button
-});
+    // Add click event listener to the "Close Contact Form" button
+    closeFormBtn.addEventListener('click', function() {
+        // Hide the form and close button, show the "Contact Me" button
+        contactForm.style.display = 'none';
+        toggleBtn.style.display = 'inline-block';  // Show the "Contact Me" button
+        closeFormBtn.style.display = 'none';  // Hide the close button
+    });
