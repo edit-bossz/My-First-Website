@@ -217,42 +217,38 @@ body {
 }
 
 
-/* Header styling */
-header {
-    background-color: #80deea;
-    color: white;
-    padding: 25px 0;
-    text-align: center;
-    border-bottom: 2px solid #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    position: relative; /* Make sure the header is positioned relative */
-}
-
-/* Navbar (Sticky) Styling */
+/* Navigation Bar Styling */
 .navbar {
-    background-color: #333;  /* Background color */
+    position: sticky;
+    top: 0;
+    background-color: #333;  /* Dark background */
     color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    position: sticky;  /* Make it sticky */
-    top: 0;  /* Attach it to the top */
-    z-index: 100;  /* Ensures navbar stays on top */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow */
-    border-top: 2px solid #fff;  /* Optional border on top */
+    padding: 10px 0;
+    z-index: 1000;  /* Ensure the navbar stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+    margin-bottom: 20px;  /* Space between navbar and content */
 }
 
-.navbar a {
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    background-color: #007bff;
-    border-radius: 5px;
+.navbar ul li a:hover {
+    color: #ffdf00;  /* Highlight links on hover */
 }
 
 /* For mobile screens */
