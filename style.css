@@ -270,7 +270,7 @@ body {
     transform: translateX(-50%); /* Adjust for the button's width */
     background: #ffffff;
     color: black;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 50%;
     width: 35px;
     height: 35px;
