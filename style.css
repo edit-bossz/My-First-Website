@@ -359,8 +359,12 @@ body {
 }
 /* Close Contact Form Button */
 #close-form-btn {
-    display: block; /* Make the close button a block element, so it appears on a new line */
-    margin-top: 20px; /* Optional: Add some space above the button */
+    display: block; /* Make the button a block element */
+    margin-top: 20px; /* Add space above the button */
+    margin-left: auto; /* Automatically adjust left margin */
+    margin-right: auto; /* Automatically adjust right margin */
+    text-align: center; /* Center text inside the button */
+    width: max-content; /* Ensure the button only takes as much width as needed */
 }
 
 
