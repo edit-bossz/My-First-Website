@@ -218,43 +218,55 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* General Navigation Bar Styling */
-.navbar {
-    position: sticky; /* Sticks to the top while scrolling */
-    top: 0; /* Position relative to top of the viewport */
-    background: #333333; /* Dark background color */
-    padding: 10px 0; /* Space above and below the nav bar */
-    z-index: 1000; /* Ensures the navbar stays on top */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+
+
+/* Ensure header and navbar are stacked */
+.header {
+    background-color: #333; /* Example background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Styling the List */
+.navbar {
+    background-color: #444; /* Navbar background color */
+    color: white;
+    margin: 0; /* Remove any margin around the navbar */
+    padding: 10px 0;
+    position: sticky; /* Ensures navbar sticks under the header */
+    top: 0; /* Sticks it at the top of the viewport when scrolling */
+    z-index: 10; /* Keeps it above other content */
+}
+
 .navbar ul {
-    list-style: none; /* Removes bullet points */
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Makes the list items sit horizontally */
-    justify-content: center; /* Centers the nav links */
+    display: flex;
+    justify-content: center;
 }
 
-/* Styling the List Items */
 .navbar ul li {
-    margin: 0 15px; /* Space between the links */
+    margin: 0 15px;
 }
 
-/* Styling the Links */
 .navbar ul li a {
-    text-decoration: none; /* Removes underlines */
-    color: white; /* White text */
-    font-size: 16px; /* Comfortable text size */
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s; /* Smooth color transition on hover */
+    transition: color 0.3s;
 }
 
-/* Hover Effect */
 .navbar ul li a:hover {
-    color: #00bcd4; /* Light blue color when hovered */
+    color: #ffdf00; /* Hover effect */
 }
+
+/* Optional: Add spacing to separate the header from the navbar if needed */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column; /* Stack items vertically on small screens */
