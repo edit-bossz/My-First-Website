@@ -72,7 +72,7 @@ document.querySelector('a[href="#links"]').addEventListener('click', function (e
         behavior: 'smooth',
         block: 'center'
     });
-
+})
 
 
 document.getElementById("education-link").addEventListener("click", function () {
