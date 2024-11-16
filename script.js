@@ -1,5 +1,6 @@
 window.onload = function () {
-    fetch('https://my-website-backend-kiig.onrender.com', { // Use the correct backend endpoint
+    // Use the correct backend endpoint
+    fetch('https://my-website-backend-kiig.onrender.com/record', {  // Target the /record route
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -13,7 +14,7 @@ window.onload = function () {
       })
       .then((data) => console.log('Response from server:', data))
       .catch((error) => console.error('Error:', error));
-  };
+  };  
   
   
   // Select the image section and the contact button
