@@ -1,5 +1,5 @@
 window.onload = function () {
-    fetch('http://localhost:3000/record', { // Use the correct backend endpoint
+    fetch('https://my-website-backend-kiig.onrender.com', { // Use the correct backend endpoint
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
