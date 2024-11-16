@@ -1,18 +1,18 @@
-window.onload = function() {
-    fetch('http://localhost:3000', { // Replace with your deployed server URL later
+window.onload = function () {
+    fetch('http://localhost:3000/record', { // Use the correct backend endpoint
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     })
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.text();
       })
-      .then(data => console.log('Response from server:', data))
-      .catch(error => console.error('Error:', error));
+      .then((data) => console.log('Response from server:', data))
+      .catch((error) => console.error('Error:', error));
   };
   
   
