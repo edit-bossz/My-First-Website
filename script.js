@@ -1,5 +1,5 @@
 window.onload = function () {
-    fetch('https://my-website-backend-n8i0.onrender.com', { // Use the correct backend endpoint
+    fetch('https://my-website-backend-r4ty.onrender.com', { // Use the correct backend endpoint
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
