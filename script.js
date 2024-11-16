@@ -1,16 +1,15 @@
-// This will send the IP and time request to the backend when the user visits the site
 window.onload = function() {
     fetch('http://localhost:3000/record', {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json', // Ensure the backend knows it's JSON (optional but good practice)
+      },
     })
     .then(response => response.text())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
   };
-  
-  
-  
-  
+
   
   // Select the image section and the contact button
 const imageSection = document.querySelector('.image-section');
