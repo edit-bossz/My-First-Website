@@ -1,14 +1,15 @@
 window.onload = function() {
-    fetch('http://localhost:3000/record', {
+    fetch('https://my-website-backend-jldi5bqxm-mayukh-roys-projects-040441c3.vercel.app/', {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json', // Ensure the backend knows it's JSON (optional but good practice)
+        'Content-Type': 'application/json',
       },
     })
     .then(response => response.text())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
   };
+  
 
   
   // Select the image section and the contact button
