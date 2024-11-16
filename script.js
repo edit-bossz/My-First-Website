@@ -1,5 +1,5 @@
 window.onload = function() {
-    fetch('http://localhost:3000/record', { // Replace with your deployed server URL later
+    fetch('http://localhost:3000', { // Replace with your deployed server URL later
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
