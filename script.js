@@ -1,4 +1,18 @@
-// Select the image section and the contact button
+// This will send the IP and time request to the backend when the user visits the site
+window.onload = function() {
+    fetch('http://localhost:3000/record', {
+      method: 'GET',
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+  };
+  
+  
+  
+  
+  
+  // Select the image section and the contact button
 const imageSection = document.querySelector('.image-section');
 const contactButton = document.getElementById('contact-button');
 
