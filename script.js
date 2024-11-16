@@ -1,5 +1,5 @@
 window.onload = function() {
-    fetch('https://my-website-backend-jldi5bqxm-mayukh-roys-projects-040441c3.vercel.app/', {
+    fetch('', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
