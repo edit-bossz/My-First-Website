@@ -1,0 +1,17 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Welcome to the GitHub repository for Mayukh Roy's personal webpage! This project is a simple, responsive, and interactive webpage designed to showcase my profile, interests, and social media links. You can view the page live [here](https://edit-bossz.github.io/My-Website/).",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1"
+  }
+}
