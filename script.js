@@ -1,16 +1,20 @@
 window.onload = function() {
-    fetch('', {
+    fetch('http://localhost:3000/record', { // Replace with your deployed server URL later
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     })
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => console.log('Response from server:', data))
+      .catch(error => console.error('Error:', error));
   };
   
-
   
   // Select the image section and the contact button
 const imageSection = document.querySelector('.image-section');
