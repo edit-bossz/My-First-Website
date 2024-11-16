@@ -1,6 +1,6 @@
 window.onload = function () {
     // Use the correct backend endpoint
-    fetch('https://my-website-backend-kiig.onrender.com/record', {  // Target the /record route
+    fetch('https://my-website-backend-kiig.onrender.com/', {  // Target the /record route
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
