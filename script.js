@@ -72,19 +72,6 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
     });
 });
 
-
-// Function to open multiple links
-function openMultipleLinks() {
-    // Open the first link immediately
-    window.open('https://github.com/edit-bossz', '_blank');
-    
-    // Delay opening the second link slightly to avoid it being treated as a popup
-    setTimeout(() => {
-        window.open('https://orcid.org/0009-0009-4169-8752', '_blank');
-    }, 500); // Adjust delay if needed
-}
-
-
 document.getElementById("education-link").addEventListener("click", function () {
     window.open("https://southpoint.ac.in/", "_blank"); // Opens in a new tab
 });
