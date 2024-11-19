@@ -1,0 +1,13 @@
+name: Visit Website Every Minute
+
+on:
+  schedule:
+    - cron: "* * * * *"  # Runs every minute
+
+jobs:
+  visit-website:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    steps:
+      - name: Visit the website
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://edit-bossz.github.io/My-Website/
