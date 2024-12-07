@@ -75,6 +75,9 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
 document.getElementById("education-link").addEventListener("click", function () {
     window.open("https://southpoint.ac.in/", "_blank"); // Opens in a new tab
 });
+document.getElementById("intro-link").addEventListener("click", function () {
+    window.open("https://github.com/edit-bossz/", "_blank"); // Opens in a new tab
+});
 
 document.querySelector('a[href="#links"]').addEventListener('click', function (event) {
     event.preventDefault(); // Prevent the default link behavior
