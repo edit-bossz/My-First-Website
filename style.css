@@ -434,19 +434,3 @@ body {
         font-size: 1.5rem;
     }
 }
-
-
-#see-marks-button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-#see-marks-button:hover {
-    background-color: #45a049;
-}
