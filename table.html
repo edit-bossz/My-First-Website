@@ -6,93 +6,79 @@
     <title>My Marks</title>
     <link rel="icon" href="favicon.jpeg" type="image/jpeg">
     <style type="text/css">
-		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Times New Roman"; font-size:1rem; }
-		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
-		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
-		comment { display:none;  } 
-        body {
+    body {
         font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+        margin: 20px;
         background-color: #f4f4f9;
         color: #333;
+        text-align: center;
     }
-    body {
-    text-align: center; /* Centers inline-block elements like h1 */
-}
-
-h1 {
-    display: inline-block; /* Shrinks width to fit content */
-    font-size: 2.5rem;
-    color: #4CAF50;
-    font-family: 'Arial Black', Gadget, sans-serif;
-    text-transform: uppercase;
-    margin: 30px 0;
-    padding: 10px 20px;
-    background-color: #f0f8ff;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #555; /* Muted gray color */
-    font-family: 'Georgia', serif;
-    text-transform: capitalize;
-    margin: 20px 0 10px;
-    border-bottom: 2px solid #4CAF50; /* Decorative underline */
-    display: inline-block;
-    padding: 5px 20px;
-}
-
+    h1, h2 {
+        text-align: center;
+        color: #4CAF50;
+    }
+    h1 {
+        display: inline-block;
+        font-size: 2.5rem;
+        font-family: 'Arial Black', Gadget, sans-serif;
+        text-transform: uppercase;
+        margin: 30px 0;
+        padding: 10px 20px;
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Georgia', serif;
+        text-transform: capitalize;
+        margin: 20px 0 10px;
+        border-bottom: 2px solid #4CAF50;
+        display: inline-block;
+        padding: 5px 20px;
+    }
     table {
         width: 90%;
         margin: 20px auto;
         border-collapse: collapse;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
-    table th, table td {
+    td {
+        border: 1px solid #ddd;
         padding: 10px;
         text-align: center;
-        border: 1px solid #ddd;
+        font-size: 14px;
     }
-
-    table th {
-        background-color: #4CAF50;
-        color: white;
-        text-transform: uppercase;
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #eaeaea;
+    }
+    .header-row {
+        background-color: #2c3e50;
+        color: #fff;
         font-weight: bold;
     }
-
-    table tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-
-    table tr:hover {
-        background-color: #f1f1f1;
-    }
-
     .highlight {
         background-color: #ffeb3b;
         font-weight: bold;
     }
-
     @media (max-width: 600px) {
         table {
-            font-size: 14px;
+            font-size: 12px;
         }
-
-        table th, table td {
+        td {
             padding: 8px;
         }
     }
-	</style>
+</style>
 </head>
 <body>
     <h1>School</h1><br>
-    <h2>Class VI</h2>
+    <h2>Class VI</h2><br><p style="text-align: left;">Roll No: 26</p>
     <table cellspacing="0" border="0">
         <colgroup span="12" width="59"></colgroup>
         <colgroup width="36"></colgroup>
@@ -243,7 +229,7 @@ h2 {
             <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="50" sdnum="1033;0;0"><font face="Arial" color="#000000">50</font></td>
         </tr>
     </table><br><br><br>
-    <h2>Class VII</h2>
+    <h2>Class VII</h2><br><p style="text-align: left;">Roll No: 23</p>
     <table cellspacing="0" border="0">
         <colgroup span="12" width="59"></colgroup>
         <colgroup width="35"></colgroup>
@@ -394,76 +380,191 @@ h2 {
             <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdnum="1033;0;0"><font face="Arial" color="#000000">-</font></td>
         </tr>
     </table>    
-    <h1>Olympiad</h1><br>
-    <h2>2022-23</h2>
-    <table cellspacing="0" border="0">
-        <colgroup width="99"></colgroup>
-        <colgroup width="64"></colgroup>
-        <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=middle><font color="#000000">LEVEL 1</font></td>
-            </tr>
-        <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=middle><font color="#000000">Science - 54/60</font></td>
-            </tr>
-        <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=middle><font color="#000000"><br></font></td>
-            </tr>
-        <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=middle><font color="#000000">LEVEL 2</font></td>
-            </tr>
-        <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=middle><font color="#000000">Science - 54/60</font></td>
-            </tr>
-    </table>    
-    <h2>2023-24</h2>
+    <h1>SOF Olympiad</h1><br>
+<h2>2022-23</h2><br><p style="text-align: left;">Roll No: WB0414-05-284</p>
+<table cellspacing="0" border="0">
+    <colgroup width="99"></colgroup>
+    <colgroup width="64"></colgroup>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 1</b></td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 54/60</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 29</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: 22</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 17</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Award: Medal of Distinction, Certificate of Distinction</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Details Not Available</td>
+    </tr>
+</table>
+<h2>2023-24</h2><br><p style="text-align: left;">Roll No: WB0228-06-X-031</p>
+<table cellspacing="0" border="0">
+    <colgroup span="2" width="64"></colgroup>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 1</b></td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 49/60</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 76</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: 50</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 21</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Award: Medal of Distinction, Certificate of Distinction</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: 10</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 43/60</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 1450</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 97</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
+    </tr>
+</table>
+<table cellspacing="0" border="0">
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 1</b></td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">IMO - 55/60</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 64</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: 55</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 36</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: 12</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">School Award: Gold Medal of Excellence, Participation Certificate, Student Performance Report (SPR)</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">IMO - 41/60</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 2374</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 118</td>
+    </tr>
+    <tr>
+        <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
+    </tr>
+</table>
+    <h2>2024-25</h2><br><p style="text-align: left;">Roll No: WB0228-07-E-054</p>
     <table cellspacing="0" border="0">
         <colgroup span="2" width="64"></colgroup>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">LEVEL 1</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 1</b></td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Science - 49/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 49/60</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Maths - 55/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 76</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000"><br></font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: 50</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">LEVEL 2</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 21</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Science - 43/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Award: Medal of Distinction, Certificate of Distinction</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Maths - 41/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: 10</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 43/60</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 1450</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 97</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
+        </tr>
     </table>
-    <h2>2024-25</h2>
     <table cellspacing="0" border="0">
-        <colgroup span="2" width="64"></colgroup>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">LEVEL 1</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 1</b></td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Science - ?/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">IMO - ?/60</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Maths - ?/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: ?</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000"><br></font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: ?</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">LEVEL 2</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: ?</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Science - ?/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: ?</td>
+        </tr>
         <tr>
-            <td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" colspan=2 height="19" align="center" valign=bottom><font color="#000000">Maths - ?/60</font></td>
-            </tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">School Award: ?, Participation Certificate, Student Performance Report (SPR)</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">IMO - ?/60</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: ?</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: ?</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
+        </tr>
     </table>
 </body>
 </html>
