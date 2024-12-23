@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Marks</title>
     <link rel="icon" href="favicon.jpeg" type="image/jpeg">
-    <style type="text/css">
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -87,16 +87,84 @@
                 padding: 8px;
             }
         }
+        
+        .filter-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-box {
+            display: none;
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .filter-box h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .filter-box label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 
 <body>
-    <h1>School</h1><br>
-    <!--Nursery I begins-->
+    <button class="filter-button" onclick="toggleFilterBox()">Open Filter Box</button>
+
+    <div class="filter-box" id="filterBox">
+        <h3>Filter Options</h3>
+
+        <h4>School</h4>
+        <label><input type="checkbox" class="overall-checkbox" data-group="school" checked> Select All</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="nursery1" data-group="school" checked> Nursery I</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="nursery2" data-group="school" checked> Nursery II</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="transition" data-group="school" checked> Transition</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class1" data-group="school" checked> Class 1</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class2" data-group="school" checked> Class 2</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class3" data-group="school" checked> Class 3</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class4" data-group="school" checked> Class 4</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class5" data-group="school" checked> Class 5</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class6" data-group="school" checked> Class 6</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="class7" data-group="school" checked> Class 7</label>
+
+        <h4>Olympiad</h4>
+        <label><input type="checkbox" class="overall-checkbox" data-group="olympiad" checked> Select All</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2022-23" data-group="olympiad" checked> 2022-23</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2023-24" data-group="olympiad" checked> 2023-24</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2024-25" data-group="olympiad" checked> 2024-25</label>
+    </div>
+
+    <div class="section nursery1">
+        <h1>School</h1><br>
+        <!--Nursery I begins-->
     <h2>Nursery I</h2><br>
     <p style="text-align: left;">I DON'T EXIST HERE 😊</p>
     <!--Nursery I ends-->
-    <!--Nursery II begins-->
+    </div>
+    <div class="section nursery2">
+        <!--Nursery II begins-->
     <h2>Nursery II</h2><br>
     <p style="text-align: left;">Roll No: 45<br>Section: G<br>Attendance: 153/168 (
         <script>document.write(((153 / 168) * 100).toFixed(2) + '%');</script>)
@@ -597,7 +665,9 @@
         </tr>
     </table>
     <!--Nursery II ends-->
-    <!--Transition begins-->
+    </div>
+    <div class="section transition">
+        <!--Transition begins-->
     <h2>Transition</h2><br>
     <p style="text-align: left;">Roll No: 45<br>Section: G<br>Attendance: 156/167 (
         <script>document.write(((156 / 167) * 100).toFixed(2) + '%');</script>)
@@ -1078,7 +1148,9 @@
         </tr>
     </table>
     <!--Transition ends-->
-    <!--Class I begins-->
+    </div>
+    <div class="section class1">
+        <!--Class I begins-->
     <h2>Class I</h2><br>
     <p style="text-align: left;">Roll No: 45<br>Section: G<br>Attendance: 141/154 (
         <script>document.write(((141 / 154) * 100).toFixed(2) + '%');</script>)
@@ -1515,7 +1587,9 @@
         </tr>
     </table>
     <!--Class I ends-->
-    <!--Class II begins-->
+    </div>
+    <div class="section class2">
+        <!--Class II begins-->
     <h2>Class II</h2><br>
     <p style="text-align: left;">Roll No: 46 to 33<br>Section: G<br>Attendance: 155/164 (
         <script>document.write(((155 / 164) * 100).toFixed(2) + '%');</script>)
@@ -1996,7 +2070,9 @@
         </tr>
     </table>
     <!--Class II ends-->
-    <!--Class III begins-->
+    </div>
+    <div class="section class3">
+        <!--Class III begins-->
     <h2>Class III</h2><br>
     <p style="text-align: left;">Roll No: 50<br>VCG: 03 (C, Afternoon)<br>Attendance: ONLINE</p>
     <table cellspacing="0" border="0">
@@ -2217,7 +2293,9 @@
         </tr>
     </table>
     <!--Class III ends-->
-    <!--Class IV begins-->
+    </div>
+    <div class="section class4">
+        <!--Class IV begins-->
     <h2>Class IV</h2><br>
     <p style="text-align: left;">Roll No: 34<br>Section: C<br>Attendance: ONLINE</p>
     <table cellspacing="0" border="0">
@@ -2568,7 +2646,9 @@
         </tr>
     </table>
     <!--Class IV ends-->
-    <!--Class V begins-->
+    </div>
+    <div class="section class5">
+        <!--Class V begins-->
     <h2>Class V</h2><br>
     <p style="text-align: left;">Roll No: 33<br>Section: C<br>Attendance: 116/138 (
         <script>document.write(((116 / 138) * 100).toFixed(2) + '%');</script>)<br>Section Rank: 2; Class Rank: 17
@@ -2899,7 +2979,9 @@
         </tr>
     </table>
     <!--Class V ends-->
-    <!--Class VI begins-->
+    </div>
+    <div class="section class6">
+        <!--Class VI begins-->
     <h2>Class VI</h2><br>
     <p style="text-align: left;">Roll No: 26<br>Section: C<br>Attendance: 150/152 (
         <script>document.write(((150 / 152) * 100).toFixed(2) + '%');</script>)<br>Section Rank: 1; Class Rank: 2
@@ -3416,6 +3498,8 @@
             </tr>
         </table><br><br><br>
         <!--Class VI ends-->
+    </div>
+    <div class="section class7">
         <!--Class VII begins-->
         <h2>Class VII</h2><br>
         <p style="text-align: left;">Roll No: 23<br>Section: E<br>Attendance: 73/80 (
@@ -3933,7 +4017,9 @@
                 </tr>
             </table>
             <!--Class VI ends-->
-            <h1>SOF Olympiad</h1><br>
+    </div>
+    <div class="section olympiad2022-23">
+        <h1>SOF Olympiad</h1><br>
             <h2>2022-23</h2><br>
             <p style="text-align: left;">Roll No: WB0414-05-284</p>
             <table cellspacing="0" border="0">
@@ -3965,7 +4051,9 @@
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Details Not Available</td>
                 </tr>
             </table>
-            <h2>2023-24</h2><br>
+    </div>
+    <div class="section olympiad2023-24">
+        <h2>2023-24</h2><br>
             <p style="text-align: left;">Roll No: WB0228-06-X-031</p>
             <table cellspacing="0" border="0">
                 <colgroup span="2" width="64"></colgroup>
@@ -4046,7 +4134,9 @@
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
                 </tr>
             </table>
-            <h2>2024-25</h2><br>
+    </div>
+    <div class="section olympiad2024-25">
+        <h2>2024-25</h2><br>
             <p style="text-align: left;">Roll No: WB0228-07-E-054</p>
             <table cellspacing="0" border="0">
                 <colgroup span="2" width="64"></colgroup>
@@ -4127,6 +4217,53 @@
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
                 </tr>
             </table>
+    </div>
+
+    <script>
+        function toggleFilterBox() {
+            const filterBox = document.getElementById('filterBox');
+            const filterButton = document.querySelector('.filter-button');
+
+            const isOpen = filterBox.style.display === 'block';
+            filterBox.style.display = isOpen ? 'none' : 'block';
+            filterButton.textContent = isOpen ? 'Open Filter Box' : 'Close Filter Box';
+        }
+
+        document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const targetClass = this.dataset.target;
+                const sections = document.querySelectorAll(`.${targetClass}`);
+
+                sections.forEach(section => {
+                    section.classList.toggle('hidden', !this.checked);
+                });
+
+                updateOverallCheckbox(this.dataset.group);
+            });
+        });
+
+        document.querySelectorAll('.overall-checkbox').forEach(overallCheckbox => {
+            overallCheckbox.addEventListener('change', function () {
+                const group = this.dataset.group;
+                const checkboxes = document.querySelectorAll(`.filter-checkbox[data-group="${group}"]`);
+                const isChecked = this.checked;
+
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = isChecked;
+                    const event = new Event('change');
+                    checkbox.dispatchEvent(event);
+                });
+            });
+        });
+
+        function updateOverallCheckbox(group) {
+            const overallCheckbox = document.querySelector(`.overall-checkbox[data-group="${group}"]`);
+            const checkboxes = document.querySelectorAll(`.filter-checkbox[data-group="${group}"]`);
+
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            overallCheckbox.checked = allChecked;
+        }
+    </script>
 </body>
 
 </html>
