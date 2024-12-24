@@ -87,7 +87,7 @@
                 padding: 8px;
             }
         }
-        
+
         .filter-button {
             position: fixed;
             top: 10px;
@@ -112,6 +112,7 @@
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
+            text-align: left;
         }
 
         .filter-box h3 {
@@ -126,18 +127,19 @@
 
         .hidden {
             display: none !important;
-        }
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+}
     </style>
 </head>
-
 <body>
     <button class="filter-button" onclick="toggleFilterBox()">Open Filter Box</button>
 
     <div class="filter-box" id="filterBox">
         <h3>Filter Options</h3>
 
-        <h4>School</h4>
-        <label><input type="checkbox" class="overall-checkbox" data-group="school" checked> Select All</label>
+        <h4>School <input type="checkbox" class="overall-checkbox" data-group="school" checked></h4>
         <label><input type="checkbox" class="filter-checkbox" data-target="nursery1" data-group="school" checked> Nursery I</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="nursery2" data-group="school" checked> Nursery II</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="transition" data-group="school" checked> Transition</label>
@@ -149,15 +151,15 @@
         <label><input type="checkbox" class="filter-checkbox" data-target="class6" data-group="school" checked> Class 6</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="class7" data-group="school" checked> Class 7</label>
 
-        <h4>Olympiad</h4>
-        <label><input type="checkbox" class="overall-checkbox" data-group="olympiad" checked> Select All</label>
+        <h4>Olympiad <input type="checkbox" class="overall-checkbox" data-group="olympiad" checked></h4>
         <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2022-23" data-group="olympiad" checked> 2022-23</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2023-24" data-group="olympiad" checked> 2023-24</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2024-25" data-group="olympiad" checked> 2024-25</label>
     </div>
-
-    <div class="section nursery1">
+    <div class="intro school">
         <h1>School</h1><br>
+    </div>
+    <div class="section nursery1">
         <!--Nursery I begins-->
     <h2>Nursery I</h2><br>
     <p style="text-align: left;">I DON'T EXIST HERE 😊</p>
@@ -4018,8 +4020,10 @@
             </table>
             <!--Class VI ends-->
     </div>
+    <div class="intro olympiad">
+        <h1>Olympiad</h1><br>
+    </div>
     <div class="section olympiad2022-23">
-        <h1>SOF Olympiad</h1><br>
             <h2>2022-23</h2><br>
             <p style="text-align: left;">Roll No: WB0414-05-284</p>
             <table cellspacing="0" border="0">
@@ -4218,52 +4222,68 @@
                 </tr>
             </table>
     </div>
-
     <script>
         function toggleFilterBox() {
             const filterBox = document.getElementById('filterBox');
             const filterButton = document.querySelector('.filter-button');
-
+    
             const isOpen = filterBox.style.display === 'block';
             filterBox.style.display = isOpen ? 'none' : 'block';
             filterButton.textContent = isOpen ? 'Open Filter Box' : 'Close Filter Box';
         }
-
+    
         document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
             checkbox.addEventListener('change', function () {
                 const targetClass = this.dataset.target;
                 const sections = document.querySelectorAll(`.${targetClass}`);
-
+    
                 sections.forEach(section => {
                     section.classList.toggle('hidden', !this.checked);
                 });
-
+    
                 updateOverallCheckbox(this.dataset.group);
+                updateIntroVisibility(this.dataset.group);
             });
         });
-
+    
         document.querySelectorAll('.overall-checkbox').forEach(overallCheckbox => {
             overallCheckbox.addEventListener('change', function () {
                 const group = this.dataset.group;
                 const checkboxes = document.querySelectorAll(`.filter-checkbox[data-group="${group}"]`);
                 const isChecked = this.checked;
-
+    
                 checkboxes.forEach(checkbox => {
                     checkbox.checked = isChecked;
                     const event = new Event('change');
                     checkbox.dispatchEvent(event);
                 });
+    
+                // Additional logic to hide/show intro sections
+                updateIntroVisibility(group);
             });
         });
-
+    
         function updateOverallCheckbox(group) {
             const overallCheckbox = document.querySelector(`.overall-checkbox[data-group="${group}"]`);
             const checkboxes = document.querySelectorAll(`.filter-checkbox[data-group="${group}"]`);
-
+    
             const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
             overallCheckbox.checked = allChecked;
         }
-    </script>
+    
+        function updateIntroVisibility(group) {
+            if (group === 'school') {
+                const anyChecked = Array.from(document.querySelectorAll('.filter-checkbox[data-group="school"]')).some(checkbox => checkbox.checked);
+                document.querySelectorAll('.intro.school').forEach(section => {
+                    section.classList.toggle('hidden', !anyChecked);
+                });
+            } else if (group === 'olympiad') {
+                const anyChecked = Array.from(document.querySelectorAll('.filter-checkbox[data-group="olympiad"]')).some(checkbox => checkbox.checked);
+                document.querySelectorAll('.intro.olympiad').forEach(section => {
+                    section.classList.toggle('hidden', !anyChecked);
+                });
+            }
+        }
+    </script>        
 </body>
-
 </html>
