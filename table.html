@@ -78,6 +78,15 @@
             font-weight: bold;
         }
 
+        .filter-box {
+    max-height: 400px; /* Set a maximum height for the filter box */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
         @media (max-width: 600px) {
             table {
                 font-size: 12px;
@@ -155,6 +164,11 @@
         <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2022-23" data-group="olympiad" checked> 2022-23</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2023-24" data-group="olympiad" checked> 2023-24</label>
         <label><input type="checkbox" class="filter-checkbox" data-target="olympiad2024-25" data-group="olympiad" checked> 2024-25</label>
+
+        <h4>Keys <input type="checkbox" class="overall-checkbox" data-group="keys" checked></h4>
+        <label><input type="checkbox" class="filter-checkbox" data-target="nursery" data-group="keys" checked> Nursery</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="transitiontov" data-group="keys" checked> Transition to Class V</label>
+        <label><input type="checkbox" class="filter-checkbox" data-target="vitopresent" data-group="keys" checked> Class VI to Present</label>
     </div>
     <div class="intro school">
         <h1>School</h1><br>
@@ -4045,6 +4059,9 @@
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 17</td>
                 </tr>
                 <tr>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: 8</td>
+                </tr>
+                <tr>
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Award: Medal of Distinction,
                         Certificate of Distinction</td>
                 </tr>
@@ -4052,7 +4069,16 @@
                     <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Details Not Available</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 54/60</td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 289</td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 28</td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
                 </tr>
             </table>
     </div>
@@ -4143,40 +4169,39 @@
         <h2>2024-25</h2><br>
             <p style="text-align: left;">Roll No: WB0228-07-E-054</p>
             <table cellspacing="0" border="0">
-                <colgroup span="2" width="64"></colgroup>
                 <tr>
                     <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 1</b></td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 49/60</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - ?/60</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 76</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: ?</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: 50</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Regional Rank: ?</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 21</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: ?</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Award: Medal of Distinction,
-                        Certificate of Distinction</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: ?</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">School Rank: 10</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">School Award: ?, Participation
+                        Certificate, Student Performance Report (SPR)</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="border: 1px solid #000; text-align: center;"><b>LEVEL 2</b></td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - 43/60</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">NSO - ?/60</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: 1450</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">International Rank: ?</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: 97</td>
+                    <td colspan=2 style="border: 1px solid #000; text-align: center;">Zonal Rank: ?</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
@@ -4221,7 +4246,129 @@
                     <td colspan=2 style="border: 1px solid #000; text-align: center;">Award: Merit Certificate</td>
                 </tr>
             </table>
+    </div><br><br>
+    <div class="intro keys">
+        <h1>Keys</h1><br>
     </div>
+        <div class="nursery">
+        </table>
+        <!-- Table 1: Key for Nursery -->
+        <table border="1" style="border-collapse: collapse; width: 50%; margin-bottom: 20px;">
+        <caption style="font-weight: bold; margin-bottom: 10px;">Key for Nursery</caption>
+        <thead>
+        <tr>
+            <th style="padding: 8px; background-color: #f2f2f2;">Symbol</th>
+            <th style="padding: 8px; background-color: #f2f2f2;">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="padding: 8px;">A</td>
+            <td style="padding: 8px;">Always</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">O</td>
+            <td style="padding: 8px;">Often</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">S</td>
+            <td style="padding: 8px;">Sometimes</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">N</td>
+            <td style="padding: 8px;">Needs Improvement</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="transitiontov">
+        <!-- Table 2: Key for Transition to Class V -->
+        <table border="1" style="border-collapse: collapse; width: 50%; margin-bottom: 20px;">
+        <caption style="font-weight: bold; margin-bottom: 10px;">Key for Transition to Class V</caption>
+        <thead>
+        <tr>
+            <th style="padding: 8px; background-color: #f2f2f2;">Grade</th>
+            <th style="padding: 8px; background-color: #f2f2f2;">Range</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="padding: 8px;">A+</td>
+            <td style="padding: 8px;">90-100</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">A</td>
+            <td style="padding: 8px;">82-89</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">B</td>
+            <td style="padding: 8px;">74-81</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">C</td>
+            <td style="padding: 8px;">66-73</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">D</td>
+            <td style="padding: 8px;">58-65</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">E</td>
+            <td style="padding: 8px;">50-57</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">F</td>
+            <td style="padding: 8px;">Below 50</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="vitopresent">
+        <!-- Table 3: Key for Class VI to Present -->
+        <table border="1" style="border-collapse: collapse; width: 50%; margin-bottom: 20px;">
+        <caption style="font-weight: bold; margin-bottom: 10px;">Key for Class VI to Present</caption>
+        <thead>
+        <tr>
+            <th style="padding: 8px; background-color: #f2f2f2;">Grade</th>
+            <th style="padding: 8px; background-color: #f2f2f2;">Range</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="padding: 8px;">A1</td>
+            <td style="padding: 8px;">91-100</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">A2</td>
+            <td style="padding: 8px;">81-90</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">B1</td>
+            <td style="padding: 8px;">71-80</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">B2</td>
+            <td style="padding: 8px;">61-70</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">C1</td>
+            <td style="padding: 8px;">51-60</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">C2</td>
+            <td style="padding: 8px;">41-50</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">D</td>
+            <td style="padding: 8px;">33-40</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">E</td>
+            <td style="padding: 8px;">32 & below (needs improvement)</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
     <script>
         function toggleFilterBox() {
             const filterBox = document.getElementById('filterBox');
@@ -4280,6 +4427,11 @@
             } else if (group === 'olympiad') {
                 const anyChecked = Array.from(document.querySelectorAll('.filter-checkbox[data-group="olympiad"]')).some(checkbox => checkbox.checked);
                 document.querySelectorAll('.intro.olympiad').forEach(section => {
+                    section.classList.toggle('hidden', !anyChecked);
+                });
+            } else if (group === 'keys') {
+                const anyChecked = Array.from(document.querySelectorAll('.filter-checkbox[data-group="keys"]')).some(checkbox => checkbox.checked);
+                document.querySelectorAll('.intro.keys').forEach(section => {
                     section.classList.toggle('hidden', !anyChecked);
                 });
             }
