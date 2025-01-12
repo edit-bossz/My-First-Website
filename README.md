@@ -1,6 +1,6 @@
 # Personal Webpage for Mayukh Roy
 
-Welcome to the GitHub repository for Mayukh Roy's personal webpage! This project is a simple, responsive, and interactive webpage designed to showcase my profile, interests, and social media links. You can view the page live [here](https://edit-bossz.github.io/My-Website/).
+Welcome to the GitHub repository for Mayukh Roy's personal webpage! This project is a simple, responsive, and interactive webpage designed to showcase my profile, interests, and social media links. You can view the page live [here](https://edit-bossz.github.io/My-First-Website/).
 
 ---
 
